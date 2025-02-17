@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+
+/* ..............navbar.................. */
+
+.navbar-container{
+    width: 90%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    /* background-color:black; */
+    border-bottom: 2px solid whitesmoke;
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    left: 5%; 
+    right: 5%; 
+}
+.navlogo-section{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: blueviolet; */
+}
+.navlogo-section img{
+    width: 70%;
+}
+.navbar-container label {
+    display: none;
+
+}
+#checking{
+    display: none;
+}
+.navbar-container label {
+    display: none;
+}
+
+.nav-items {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.nav-items a{
+    font-size: 18px;
+    font-family: "Poppins", serif;
+    color:white;
+    text-decoration: none;
+}
+.nav-items a:hover{
+    color: rgb(27,77,159);
+}
+
+/* .......banner............ */
+
+  .banner {
+      position: relative;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+  
+  .banner-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Adjust for transparency */
+    z-index: 1;
+  }
+  .banner-content {
+    position: relative;
+    color: white;
+    display: flex;
+  }
+  .banner-content h1{
+    font-size: 3rem;
+    font-weight: 300;
+    font-family: "Poppins", serif;
+  }
+  
+
+/* ........gallery............ */
+@keyframes morph {
+    0%,
+    100% {
+      border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+    }
+    34% {
+      border-radius: 50% 30% 50% 50% / 30% 30% 70% 70%;
+    }
+    67% {
+      border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+    }
+  }
+
+
+.gallery-container{
+    width: 100%;
+    padding: 5%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);   
+    /* background-color: aqua; */
+    margin-top: 6%;
+    gap: 30px;
+}
+.gallery-image{
+    width: 100%;
+    height: 350px;
+    border-radius: 25px;
+    background-color: blue;
+    animation: morph 3.5s linear infinite;
+    background-size: cover;
+}
+
+/* Assigning different background images */
+.gallery-image:nth-child(1) { background-image: url(''); }
+.gallery-image:nth-child(2) { background-image: url('image2.jpg'); }
+.gallery-image:nth-child(3) { background-image: url('image3.jpg'); }
+.gallery-image:nth-child(4) { background-image: url('image4.jpg'); }
+.gallery-image:nth-child(5) { background-image: url('images/DeWatermark.ai_1739425587507.png'); }
+.gallery-image:nth-child(6) { background-image: url('image6.jpg'); }
+.gallery-image:nth-child(7) { background-image: url('image7.jpg'); }
+.gallery-image:nth-child(8) { background-image: url('image8.jpg'); }
+.gallery-image:nth-child(9) { background-image: url('image9.jpg'); }
+
+
+
+
+/* footer */
+
+.footer{
+  width: 100%;
+  height: 100px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
