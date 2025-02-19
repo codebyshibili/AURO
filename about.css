@@ -132,6 +132,7 @@ body{
     text-align: justify;
     gap: 20px;
     /* background-color: aquamarine; */
+    overflow-x: hidden;
   }
   .about-container h2{
     font-size: 1.4rem;
@@ -160,6 +161,7 @@ body{
     background-color: whitesmoke;
     margin-left: 5%;
     border-radius: 25px;
+    overflow: hidden;
 }
 .mission-card {
     text-align: center;
@@ -167,7 +169,7 @@ body{
     padding: 40px;
     border: 2px solid white;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    min-width: 600px;
+    width: 600px;
      border-radius: 25px;
 }
 .mission-card .icon {
@@ -251,3 +253,85 @@ body{
     justify-content: center;
     color: white;
   }
+
+
+
+
+  
+ @media (max-width:768px){
+
+
+/* nav */
+
+.navlogo-section{
+ width: auto;
+ padding-left: 5%;
+
+}
+.navlogo-section img{
+ width: 150px;
+}
+.nav-items {
+ display: block;
+ position: fixed;
+ top: 0;
+ right: -100%;
+ background-color:black;
+ width: 50%;
+ height: 50%;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: space-evenly;
+ font-family: "Poppins", serif;
+ border-radius: 10px;
+}
+
+.nav-items a {
+ line-height: 10px;
+}
+
+.nav-items label {
+ position: absolute;
+ top: -1%;
+ right: 5%;
+}
+.nav-items label img{
+ margin-top: 50%;
+}
+.nav-items input {
+ display: block;
+}
+
+#checking:checked~.nav-items {
+ right: 0;
+}
+
+
+.navbar-container label {
+ display: block;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ 
+}
+.navbar-container label img{
+ width: 40px;
+}
+
+
+/* mission */
+.mission-container {
+  flex-direction: column;
+  padding: 2%;
+}
+.mission-card{
+  width: 100%;
+}
+.achievements-section{
+  flex-direction: column;
+}
+.achievement{
+  width: 80%;
+}
+}

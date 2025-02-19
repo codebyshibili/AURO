@@ -483,9 +483,7 @@ body{
   
 
  @media (max-width:768px){
-  .web-container{
-      max-width: 768px;
-  }
+
 
      .nav-banner-container{
          height: 80vh;
@@ -554,6 +552,9 @@ body{
     flex-direction: column;
   }
  
+  .about-container img{
+    width: 90%;
+  }
   /* why */
   .whypage-container{
     width: 100%;
@@ -586,4 +587,30 @@ body{
 
   }
 
+ }
+
+
+ @media (max-width:500px){
+
+  /* banner */
+
+  .banner-content span{
+    font-size:1.8rem ;
+  }
+  .banner-content h1{
+    font-size: 2.8rem;
+  }
+
+  /* banner2 */
+  .banner2-container h2{
+    font-size: 2rem;
+  }
+  .banner2-container p{
+    font-size: 0.9rem;
+    padding: 5%;
+  }
+  h2{
+    font-size: 1.8rem;
+    text-align: center;
+  }
  }
