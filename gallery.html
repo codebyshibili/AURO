@@ -25,10 +25,10 @@
           <div class="nav-items">
               <input type="checkbox" id="checking">
               <label for="checking"><img src="images/icons8-close-30 (1).png" alt=""></label>
-              <a href="#">Home</a>
+              <a href="index.html">Home</a>
               <a href="about.html">About</a>
-              <a href="product.html">Product</a>
-              <a href="gallery.html">Gallery</a>
+              <a href="products.html">Product</a>
+              <a href="#">Gallery</a>
               <a href="contact.html">Contact</a>
           </div>
     </div>
@@ -53,24 +53,44 @@
 
    <div class="gallery-container">
 
-    <div class="gallery-image"></div>
-    <div class="gallery-image"></div>
-    <div class="gallery-image"></div>
-    <div class="gallery-image"></div>
-    <div class="gallery-image"></div>
-    <div class="gallery-image"></div>
-    <div class="gallery-image"></div>
-    <div class="gallery-image"></div>
-    <div class="gallery-image"></div>
+    <div class="gallery-image" data-aos="fade-right"></div>
+    <div class="gallery-image" data-aos="fade-up"></div>
+    <div class="gallery-image" data-aos="fade-left"></div>
+    <div class="gallery-image" data-aos="fade-right"></div>
+    <div class="gallery-image" data-aos="fade-up"></div>
+    <div class="gallery-image" data-aos="fade-left"></div>
 
    </div>
    
    <!-- footer -->
+    
+   <footer class="footer">
+    <div class="footer-content">
+        <nav class="footer-nav">
+            <a href="#">About</a>
+            <a href="#">Products</a>
+            <a href="#">Gallery</a>
+            <a href="#">Contact</a>
+        </nav>
+        <div class="footer-logo"><img src="images/auro-l.png" alt=""></div>
+        <div class="footer-copyright">
+            Copyright © 2025. Auroblue. All rights reserved.
+        </div>
+    </div>
+</footer>
 
-  <div class="footer">
-    <p>© Copyright 2025 HJ Designs. All Rights Reserved.</p>
-  </div>
+   <!-- AOS JS -->
 
-  
+   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+   <script>
+     // Initialize AOS
+     document.addEventListener('DOMContentLoaded', () => {
+       AOS.init({
+         duration: 1000, // Animation duration
+         once: false,     // Run animation only once
+         easing: 'ease-in-out'
+       });
+     });
+   </script> 
 </body>
 </html>

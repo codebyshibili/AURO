@@ -139,9 +139,13 @@ body{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
   
-  .contact-info p {
+  .contact-info a{
     margin-bottom: 12px;
     font-family: "Poppins", serif;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
     color: rgb(184, 183, 183);
   }
   
@@ -159,6 +163,7 @@ body{
   
   .contact-form p {
     margin-bottom: 20px;
+    font-family: "Poppins", serif;
   }
   
   input, textarea {
@@ -188,17 +193,73 @@ body{
 
 
   
+
+
 /* footer */
 
-.footer{
-    width: 100%;
-    height: 100px;
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
+.footer {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px;
+}
+
+/* Navigation Links */
+.footer-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "Poppins", serif;
+}
+
+
+
+
+/* Copyright */
+.footer-copyright {
+  font-size: 14px;
+  opacity: 0.7;
+  font-family: "Poppins", serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+  .footer-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 15px;
   }
+  
+  .footer-nav {
+    display: none;
+
+  }
+
+
+  .footer-logo {
+      font-size: 28px;
+      display: none;
+  }
+
+  .footer-copyright {
+      font-size: 14px;
+  }
+}
 
 
 

@@ -10,22 +10,15 @@ body{
     flex-direction: column;
     background-color: white;
 }
-
-
 /* ..............navbar.................. */
 
 .navbar-container{
-    width: 90%;
+    width: 100%;
     height: 100px;
     display: flex;
     justify-content: space-between;
-    /* background-color:black; */
+    background-color:black;
     border-bottom: 2px solid whitesmoke;
-    position: absolute;
-    top: 0;
-    z-index: 1000;
-    left: 5%; 
-    right: 5%; 
 }
 .navlogo-section{
     width: 15%;
@@ -66,120 +59,85 @@ body{
     color: rgb(27,77,159);
 }
 
-/* .......banner............ */
 
-  .banner {
-      position: relative;
-      height: 80vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-  
-  .banner-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-    z-index: -1;
-  }
-  
-  .banner-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Adjust for transparency */
-    z-index: 1;
-  }
-  .banner-content {
-    position: relative;
-    color: white;
-    display: flex;
-  }
-  .banner-content h1{
-    font-size: 3rem;
-    font-weight: 300;
-    font-family: "Poppins", serif;
-  }
-  
+/* ..........product.............. */
 
-
-/* .........products.......... */
-
-.products-container{
+.product-page-container{
     width: 100%;
     padding: 5%;
-    /* background-color: aqua; */
-    margin-top: 8%;
-    display: grid;
-    place-content: center;
-    grid-template-columns: repeat(2,1fr);
-    gap: 50px;
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+}
+.product-title{
+    width: 100%;
+    display: flex;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    align-items: center;
+    justify-content: center;
+    /* background-color: blue; */
+}
+.product-title h2{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: inline-block;
+    position: relative;
+}
+.product-title h2::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 60%; /* Adjust width */
+    height: 3px; /* Adjust thickness */
+    background-color: rgb(27,77,159);
+    transform: translateX(-50%);
 }
 .product{
     width: 100%;
-    height: auto;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 5%;
     background-color: whitesmoke;
-    border-radius: 25px;
-    overflow: hidden;
-    margin-top: 2%;
-}
-.product img{
-    width:100%;
-    height: 300px;
 }
 .product-cont{
-    width: 100%;
-    padding: 2%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    color: white;
-    background-color:black;
+   width: 40%;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
 }
+
 .product-cont h3{
-    font-size: 1.4rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 300; 
+    font-size: 1.5rem;
 }
 .product-cont p{
-    font-size: 1rem;
-    font-family: "Poppins", serif;
+    font-family: "Poppins", serif; 
     text-align: justify;
 }
-.product-cont button{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-top: 3%;
-    align-self: flex-end;
+.product img{
+    width: 50%;
+    height: 400px;
+    border-radius: 25px;
+}
+
+
+
+
+.product-img{
+    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.8rem;
-    background-color: white;
-}
-.product-cont button img{
-    width: 30px;
-    height: 30px;
+    justify-content: space-between;
+    margin-top: 3%;
 }
 
-.product-cont button:hover{
-    background-color: gray;
+.product-img img{
+    border-radius: 25px;
 }
-
-
-/* footer */
 
 /* footer */
 
@@ -246,10 +204,6 @@ body{
         font-size: 14px;
     }
   }
-  
-  
-
-
 
 
 
@@ -259,7 +213,7 @@ body{
 
 
     
- @media (max-width:768px){
+@media (max-width:768px){
 
 
     /* nav */
@@ -321,8 +275,24 @@ body{
     }
 
 
-    .products-container{
-        grid-template-columns: repeat(1,1fr);
-
+    .product{
+        flex-direction: column;
     }
- }    
+
+    .product-cont{
+        width: 100%;
+    }
+    .product-title{
+        font-size: 1rem;
+    }
+    .product img{
+        width: 100%;
+        height: 300px;
+    }
+    .product-img{
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 3%;
+    }
+   
+}

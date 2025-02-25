@@ -110,18 +110,7 @@ body{
   
 
 /* ........gallery............ */
-@keyframes morph {
-    0%,
-    100% {
-      border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
-    }
-    34% {
-      border-radius: 50% 30% 50% 50% / 30% 30% 70% 70%;
-    }
-    67% {
-      border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
-    }
-  }
+
 
 
 .gallery-container{
@@ -143,30 +132,85 @@ body{
 }
 
 /* Assigning different background images */
-.gallery-image:nth-child(1) { background-image: url(''); }
-.gallery-image:nth-child(2) { background-image: url('image2.jpg'); }
-.gallery-image:nth-child(3) { background-image: url('image3.jpg'); }
-.gallery-image:nth-child(4) { background-image: url('image4.jpg'); }
+.gallery-image:nth-child(1) { background-image: url('images/istockphoto-1441225869-612x612.jpg'); }
+.gallery-image:nth-child(2) { background-image: url('images/71PE44ksbyL._AC_UF350\,350_QL80_.jpg'); }
+.gallery-image:nth-child(3) { background-image: url('images/Grease-Trap.jpg'); }
+.gallery-image:nth-child(4) { background-image: url('images/APS90_action-01__70542.jpg'); }
 .gallery-image:nth-child(5) { background-image: url('images/DeWatermark.ai_1739425587507.png'); }
-.gallery-image:nth-child(6) { background-image: url('image6.jpg'); }
-.gallery-image:nth-child(7) { background-image: url('image7.jpg'); }
-.gallery-image:nth-child(8) { background-image: url('image8.jpg'); }
-.gallery-image:nth-child(9) { background-image: url('image9.jpg'); }
+.gallery-image:nth-child(6) { background-image: url(''); }
 
 
 
 
 /* footer */
 
-.footer{
-  width: 100%;
-  height: 100px;
-  background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* footer */
+
+.footer {
+  background-color: #1a1a1a;
   color: white;
+  padding: 20px 0;
+  text-align: center;
 }
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px;
+}
+
+/* Navigation Links */
+.footer-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "Poppins", serif;
+}
+
+
+
+
+/* Copyright */
+.footer-copyright {
+  font-size: 14px;
+  opacity: 0.7;
+  font-family: "Poppins", serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+  .footer-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 15px;
+  }
+  
+  .footer-nav {
+    display: none;
+
+  }
+
+
+  .footer-logo {
+      font-size: 28px;
+      display: none;
+  }
+
+  .footer-copyright {
+      font-size: 14px;
+  }
+}
+
+
 
 
 
@@ -237,7 +281,7 @@ body{
    width: 40px;
 }
 .gallery-container{
-  grid-template-columns: repeat(1,1fr);  
+  grid-template-columns: repeat(1,1fr);   
 }
 
 }

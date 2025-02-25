@@ -222,6 +222,18 @@ body{
     font-size: 1.8rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color:black;
+    display: inline-block;
+    position: relative;
+  }
+  .why-title h2::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 60%; /* Adjust width */
+    height: 3px; /* Adjust thickness */
+    background-color: rgb(27,77,159);
+    transform: translateX(-50%);
   }
   .why-container{
     width: 100%;
@@ -244,6 +256,7 @@ body{
     padding: 2%;
     color: black;
     border: 2px solid black;
+    border-radius: 25px;
   }
   .why img{
     width:150px;
@@ -288,8 +301,19 @@ body{
     font-size: 2rem;
     color: black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: inline-block;
+    position: relative;
 }
-  
+.product-title h2::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 60%; /* Adjust width */
+  height: 3px; /* Adjust thickness */
+  background-color: rgb(27,77,159);
+  transform: translateX(-50%);
+}
 
 /* Slider Container */
 .slider-container {
@@ -323,7 +347,7 @@ body{
   text-align: center;
   width: 300px;
   height: 450px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); */
   overflow: hidden;
 }
 .product-image{
@@ -335,8 +359,8 @@ body{
     background-color: whitesmoke;
 }
 .product-image img{
-    width: 90%;
-    height:300px;
+    width: 100%;
+    height:100%;
     object-fit: cover;
 }
 .product-cont{
@@ -443,6 +467,18 @@ body{
    font-size: 2rem;
    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
    color: black;
+   display: inline-block;
+   position: relative;
+}
+.brands-container h2::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 60%; /* Adjust width */
+  height: 3px; /* Adjust thickness */
+  background-color: #3498db;
+  transform: translateX(-50%);
 }
 .brands{
     width: 100%;
@@ -460,15 +496,69 @@ body{
 
 /* footer */
 
-.footer{
-    width: 100%;
-    height: 100px;
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
+.footer {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px;
+}
+
+/* Navigation Links */
+.footer-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "Poppins", serif;
+}
+
+
+
+
+/* Copyright */
+.footer-copyright {
+  font-size: 14px;
+  opacity: 0.7;
+  font-family: "Poppins", serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+  .footer-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 15px;
   }
+  
+  .footer-nav {
+    display: none;
+
+  }
+
+
+  .footer-logo {
+      font-size: 28px;
+      display: none;
+  }
+
+  .footer-copyright {
+      font-size: 14px;
+  }
+}
 
 
 
@@ -542,7 +632,7 @@ body{
       
   }
   .navbar-container label img{
-      width: 40px;
+      width: 30px;
   }
 
 
@@ -576,7 +666,7 @@ body{
 
   .card {
     max-width: 100%;
-    height: 500px;
+    height: 400px;
     flex: 0 0 calc(100% - 16px); /* Show one card per slide on smaller screens */
   }
   .product-image img{
