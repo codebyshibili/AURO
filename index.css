@@ -427,15 +427,13 @@ body{
     background-size: 100% 70vh;
     margin: 5%;
     border-radius: 25px;
-    animation: morph 3.5s linear infinite;
+    padding: 5%;
 }
 .banner2-container h2{
     font-size: 3rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .banner2-container p{
-    padding-left: 20%;
-    padding-right: 20%;
     font-size: 1.1rem;
     font-family: "Poppins", serif;
 }
@@ -672,6 +670,10 @@ body{
   .product-image img{
     object-fit: cover;
   }
+
+  .banner2-container h2{
+    font-size:2rem;
+  }
   .brands img{
     width: 80px;
 
@@ -685,22 +687,24 @@ body{
   /* banner */
 
   .banner-content span{
-    font-size:1.8rem ;
+    font-size:1.6rem ;
   }
   .banner-content h1{
-    font-size: 2.8rem;
+    font-size: 2.5rem;
   }
 
   /* banner2 */
+  .banner2-container{
+    height: 50vh;
+  }
   .banner2-container h2{
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .banner2-container p{
-    font-size: 0.9rem;
-    padding: 5%;
+    font-size:0.8rem ;
   }
+
   h2{
-    font-size: 1.8rem;
     text-align: center;
   }
  }

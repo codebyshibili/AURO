@@ -113,14 +113,15 @@ body{
 /* .........products.......... */
 
 .products-container{
-    width: 100%;
+    width:90%;
     padding: 5%;
     /* background-color: aqua; */
     margin-top: 8%;
     display: grid;
     place-content: center;
     grid-template-columns: repeat(2,1fr);
-    gap: 50px;
+    gap: 150px;
+    align-self: center;
 }
 .product{
     width: 100%;
@@ -131,7 +132,7 @@ body{
     background-color: whitesmoke;
     border-radius: 25px;
     overflow: hidden;
-    margin-top: 2%;
+    /* margin-top: 2%; */
 }
 .product img{
     width:100%;
@@ -151,11 +152,13 @@ body{
     font-size: 1.4rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 300; 
+    text-transform: uppercase;
 }
 .product-cont p{
     font-size: 1rem;
     font-family: "Poppins", serif;
     text-align: justify;
+    color:rgb(160, 157, 157);
 }
 .product-cont button{
     width: 50px;
@@ -322,7 +325,8 @@ body{
 
 
     .products-container{
+        width: 100%;
         grid-template-columns: repeat(1,1fr);
-
+        gap: 50px;
     }
  }    
